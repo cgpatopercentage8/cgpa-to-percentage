@@ -98,7 +98,7 @@
     <div class="calculator">
         <h3>CGPA to Percentage Calculator</h3>
         <input type="number" id="cgpaInput" placeholder="Enter your CGPA" step="0.1" min="0" max="10">
-        <button onclick="calculatePercentage()">Convert</button>
+        <button onclick="redirectToSite()">Use Calculator on Our Website</button>
         <div class="result" id="result"></div>
     </div>
 
@@ -129,14 +129,8 @@
 </footer>
 
 <script>
-    function calculatePercentage() {
-        const cgpa = parseFloat(document.getElementById("cgpaInput").value);
-        if (!isNaN(cgpa) && cgpa >= 0 && cgpa <= 10) {
-            const percentage = cgpa * 9.5;
-            document.getElementById("result").innerText = "Your percentage is: " + percentage.toFixed(2) + "%";
-        } else {
-            document.getElementById("result").innerText = "Please enter a valid CGPA (0-10).";
-        }
+    function redirectToSite() {
+        window.location.href = "https://www.cgpa-to-percentage.com/p/cgpa-to-percentage.html";
     }
 </script>
 
