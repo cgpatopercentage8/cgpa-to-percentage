@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to convert CGPA to Percentage with our step-by-step guide and online CGPA to Percentage Calculator. Understand the calculation method, use our free tool, and clear your doubts with FAQs!">
+    <title>CGPA to Percentage Calculator | Convert CGPA to Percentage Easily</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c6e49;
+        }
+        .calculator {
+            background-color: #e9f7ef;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin: 10px 0;
+            border: 2px solid #2c6e49;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        button {
+            background-color: #2c6e49;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #249d61;
+        }
+        .result {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CGPA to Percentage Calculator</h1>
+</header>
+
+<div class="container">
+    <h2>How to Convert CGPA to Percentage Easily</h2>
+
+    <p>Converting your CGPA (Cumulative Grade Point Average) into a percentage can be confusing for many students. CGPA is a grading system commonly used in schools, colleges, and universities worldwide. However, many job applications, universities, and exam boards may require your score in percentage format. That’s why knowing how to convert CGPA to percentage is essential.</p>
+
+    <h3>What is CGPA?</h3>
+    <p>CGPA, or Cumulative Grade Point Average, represents a student’s overall academic achievement. It’s a numerical value calculated based on grades received in different subjects. CGPA is generally calculated on a scale of 10 in Indian universities and schools.</p>
+
+    <h3>Why Convert CGPA to Percentage?</h3>
+    <p>Some organizations and academic institutions may require your scores in percentage form. Converting CGPA to percentage gives a clearer understanding of where you stand academically, especially when applying for jobs, scholarships, or further studies.</p>
+
+    <h3>How to Convert CGPA to Percentage?</h3>
+    <p>The most common formula used is:</p>
+    <p><strong>Percentage = CGPA × 9.5</strong></p>
+
+    <p>For example, if your CGPA is 8.0, then your percentage is calculated as:</p>
+    <p><strong>Percentage = 8.0 × 9.5 = 76%</strong></p>
+
+    <div class="calculator">
+        <h3>CGPA to Percentage Calculator</h3>
+        <input type="number" id="cgpaInput" placeholder="Enter your CGPA" step="0.1" min="0" max="10">
+        <button onclick="calculatePercentage()">Convert</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <h3>CGPA to Percentage Conversion Table</h3>
+    <table>
+        <tr><th>CGPA</th><th>Percentage</th></tr>
+        <tr><td>5.0</td><td>47.5%</td></tr>
+        <tr><td>6.0</td><td>57%</td></tr>
+        <tr><td>7.0</td><td>66.5%</td></tr>
+        <tr><td>8.0</td><td>76%</td></tr>
+        <tr><td>9.0</td><td>85.5%</td></tr>
+        <tr><td>10.0</td><td>95%</td></tr>
+    </table>
+
+    <h3>FAQs</h3>
+    <p><strong>1. What is the formula for converting CGPA to percentage?</strong></p>
+    <p>The common formula used is: <strong>Percentage = CGPA × 9.5</strong></p>
+
+    <p><strong>2. Can I use the calculator for any grading system?</strong></p>
+    <p>Our calculator is tailored for the 10-point CGPA system. If your institution uses a different scale, consult their conversion guidelines.</p>
+
+    <p><strong>3. Is this calculator free to use?</strong></p>
+    <p>Yes, our <strong>CGPA to Percentage Calculator</strong> is free and accessible for everyone!</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 CGPA to Percentage Calculator. All rights reserved.</p>
+</footer>
+
+<script>
+    function calculatePercentage() {
+        const cgpa = parseFloat(document.getElementById("cgpaInput").value);
+        if (!isNaN(cgpa) && cgpa >= 0 && cgpa <= 10) {
+            const percentage = cgpa * 9.5;
+            document.getElementById("result").innerText = "Your percentage is: " + percentage.toFixed(2) + "%";
+        } else {
+            document.getElementById("result").innerText = "Please enter a valid CGPA (0-10).";
+        }
+    }
+</script>
+
+</body>
+</html>
